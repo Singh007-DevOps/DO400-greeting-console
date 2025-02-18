@@ -23,16 +23,17 @@ pipeline{
 
         stage('Release') {
 
-    steps {
+            steps {
 
-        sh '''
+                sh '''
 
-            oc project tyztpt-greetings
+                    oc project tyztpt-greetings
 
-            oc start-build greeting-console  --follow --wait
+                    oc start-build greeting-console  --follow --wait
 
-        '''
+                '''
+            }
+        }
 
     }
-
 }
